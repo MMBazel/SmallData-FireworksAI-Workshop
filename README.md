@@ -1,7 +1,7 @@
 
-# Fireworks AI Workshop: [Workshop Title]
+# Fireworks AI Workshop: Building and Deploying Compound AI Systems
 
-Welcome to the repository for the **[Workshop Title]** on Fireworks AI! This repo contains all the materials, code, and resources you'll need to follow along during the workshop.
+Welcome to the repository for the **Building and Deploying Compound AI Systems** workshop on Fireworks AI! This repo contains all the materials, code, and resources you'll need to follow along during the workshop.
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -15,32 +15,39 @@ Welcome to the repository for the **[Workshop Title]** on Fireworks AI! This rep
 ---
 
 ## Overview
-In this workshop, you'll learn how to [brief summary of what participants will learn]. We'll dive into topics such as:
-- [Topic 1]
-- [Topic 2]
-- [Topic 3]
+In this workshop, we'll try to cover how to:
+- Connect to different models using Fireworks and build a Streamlit app for model comparison.
+- Deploy an LLM as part of a simple Retrieval-Augmented Generation (RAG) system.
+- Deploy a function-calling LLM as part of an agentic workflow.
+- Fine-tune a base LLM and understand how to fine-tune function-calling models.
 
-By the end of this session, you should be able to:
-- [Key learning outcome 1]
-- [Key learning outcome 2]
-- [Key learning outcome 3]
+After the workshop, check back later for more resources on how to: 
+- Develop a minimum viable compound AI system and learn best practices for scaling from development to production.
+- Understand the "Ops" side of maintaining and scaling compound AI systems in production.
+- Advanced topics about the post-training side of things, including: fine-tuning, evaluation, LoRAs, etc.
 
 ---
 
 ## Pre-requisites
-Before attending the workshop, make sure you have:
-- **Basic knowledge of [technology, concept]**: [short description of what familiarity is required].
+Before attending the workshop (or asap), make sure you have:
+- Signed up for an account on Fireworks.ai
+- Messaged me your account ID so I can add credits to your account
 - **Installed [tools, dependencies]**: See the [Setup Instructions](#setup-instructions) for installation steps.
-- [Any other requirements]
+
+And while this is helpful, this isn't required: 
+- **Basic knowledge of Generative AI concepts**: Understanding of LLMs, multimodal models, and function-calling models.
+
 
 ---
 
 ## Workshop Agenda
-- **Introduction**: Overview of Fireworks AI and its capabilities
-- **[Part 1]**: [Description of the first section/topic]
-- **[Part 2]**: [Description of the second section/topic]
-- **[Part 3]**: [Description of the third section/topic]
-- **Q&A and Wrap-Up**
+- **Part 0**: Using LLMs 101
+- **Part 1**: Connecting to Fireworks & Building a Model Comparison App
+- **Part 2**: Deploying an LLM with RAG
+- **Part 3**: Deploying a Function-Calling LLM as part of an Agentic Workflow
+- **Part 4**: Fine-tuning a Base and Function-Calling LLM
+- **Part 5**: Developing a Minimum Viable Compound AI System
+- **Part 6**: The "Ops" Side of Compound AI Systems
 
 ---
 
@@ -65,43 +72,61 @@ export API_KEY="your-api-key"
 ```
 
 ### 4. Fireworks AI Installation/Setup
-[Explain how to install or set up Fireworks AI tools or frameworks if necessary]
+- [Quickstart with Fireworks AI](https://docs.fireworks.ai/getting-started/quickstart)
+
+Additional details on: 
+- [firectl](https://docs.fireworks.ai/tools-sdks/firectl/firectl)
+- [Python Client](https://docs.fireworks.ai/tools-sdks/python-client/installation)
 
 ---
 
 ## Workshop Content
-Each section of the workshop is accompanied by code examples and exercises.
+Each section of the workshop is accompanied by a README, a notebook, and some information about Fireworks.
 
-- **[Section 1]**: [Brief description]
-  - Code: [link to code or script]
-  - Exercise: [link to exercise or notebook]
+- **[Part 0: Using LLMs 101]**
+  - Basic introduction to LLMs and setting up the Fireworks connection.
+  
+- **[Part 1: Connecting to Fireworks & Building a Model Comparison App]**
+  - Build a Streamlit app to connect and compare models hosted on Fireworks.
+  - [Guide to Querying Text Models](https://docs.fireworks.ai/guides/querying-text-models)
+  - [Guide to Querying Embedding Models](https://docs.fireworks.ai/guides/querying-embeddings-models)
 
-- **[Section 2]**: [Brief description]
-  - Code: [link to code or script]
-  - Exercise: [link to exercise or notebook]
+- **[Part 2: Deploying an LLM with RAG]**
+  - Use an LLM as part of a simple Retrieval-Augmented Generation (RAG) system with a vector store.
 
-- **[Section 3]**: [Brief description]
-  - Code: [link to code or script]
-  - Exercise: [link to exercise or notebook]
+- **[Part 3: Deploying a Function-Calling LLM as Part of an Agentic Workflow]**
+  - Deploy a function-calling LLM that interacts with external APIs and functions.
+  - [Guide to Using Function-Calling with Fireworks](https://docs.fireworks.ai/guides/function-calling)
+
+- **[Part 4: Fine-tuning a Base and Function-Calling LLM]**
+  - Kick off the fine-tuning process and explore alternatives like prompt engineering and pre-tuned models.
+
+- **[Part 5: Developing a Minimum Viable Compound AI System]**
+  - Learn best practices for scaling compound AI systems from development to production.
+
+- **[Part 6: The "Ops" Side of Compound AI Systems]**
+  - Understand MLOps processes like monitoring, retraining, scaling, and maintaining AI systems in production.
 
 ---
 
 ## Resources
-- [Official Fireworks AI Documentation](https://fireworks.ai/docs)
-- [Related blog posts](#)
-- [Additional tutorials](#)
+- [Official Fireworks AI Documentation](https://docs.fireworks.ai/getting-started/introduction)
+- [Fireworks AI Blog](https://fireworks.ai/blog)
+- [Fireworks AI YouTube](https://www.youtube.com/channel/UCHCffBTGYa1Ut72h03ldtGA)
+- [Fireworks AI Twitter](https://x.com/fireworksai_hq)
+- [Join the Workshop Discord](https://discord.gg/YPZsyFAC)
 
 ---
 
 ## FAQ
 **Q: Do I need prior experience with Fireworks AI?**  
-A: [Answer]
+A: Basic familiarity with generative models will be helpful, but we’ll cover foundational concepts in the early parts of the workshop.
 
 **Q: What should I do if I encounter an issue?**  
-A: [Answer]
+A: Review the setup instructions and consult the Fireworks documentation. You can also reach out for support during the workshop.
 
 **Q: Can I continue to access these materials after the workshop?**  
-A: [Answer]
+A: Yes, the materials will remain available on this repository, and you are welcome to clone or fork the repo for personal use.
 
 ---
 
