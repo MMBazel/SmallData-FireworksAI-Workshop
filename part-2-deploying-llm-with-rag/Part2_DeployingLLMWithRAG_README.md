@@ -1,9 +1,11 @@
 # Part 2: Deploying an LLM with Retrieval-Augmented Generation (RAG)
 
-## Task/Activity:
+## Objectives:
 In this part of the workshop, you will:
 - Deploy a **Retrieval-Augmented Generation (RAG)** system using an LLM from Fireworks.
 - Connect to a **vector store** (to be decided) to retrieve relevant documents and use the LLM to generate contextually accurate responses based on the retrieved data.
+
+---
 
 ## Relevant Concepts/Skills:
 By completing this task, you will:
@@ -11,19 +13,30 @@ By completing this task, you will:
 - Understand how to connect to and query a **vector store** for document retrieval.
 - Gain experience in building AI systems that combine retrieval and generation to handle more complex queries.
 
-## Background Information:
+---
+
+## General Background Information:
+[TODO] Add links to interesting resources at the bottom, like Vicki's embeddings book
 
 ### **A. Embeddings**
 - **What They Are**: Vector representations of text, images, or other data types. These vectors capture semantic meaning and are used in retrieval systems (e.g., vector stores) to find similar data points.
 - **Why It Matters**: Embeddings allow you to search large datasets for semantically similar documents or content, which is critical for tasks like RAG, recommendation systems, or even advanced search applications.
 
+[TODO] Add image
+
 ### **B. Retrieval-Augmented Generation (RAG)**
 - **What It Is**: A combination of a retrieval mechanism (like a vector store) and a generative model (like an LLM). This approach allows a model to pull in external knowledge or context when generating responses, making its output more accurate and relevant.
 - **Why It Matters**: Standard LLMs are limited by their training data and context window. RAG enhances these models by fetching relevant information from a database or document store before generating a response, improving accuracy and contextual understanding.
 
+[TODO] Add image
+
 ### **C. Vector Databases**
 - **What They Are**: Databases that store embeddings (vectors) and allow for similarity searches. These are used in retrieval systems to find documents or data points most similar to a given query.
 - **Why It Matters**: In RAG systems, vector databases (like Pinecone, Weaviate, or FAISS) enable quick and efficient retrieval of relevant information to feed into an LLM for more contextually aware responses.
+
+[TODO] Add image
+
+---
 
 ## Fireworks-Specific Information:
 - Fireworks AI allows you to query LLMs easily and integrates well with retrieval systems. You can combine Fireworks models with vector stores to build a RAG system.

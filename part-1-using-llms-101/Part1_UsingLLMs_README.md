@@ -28,18 +28,22 @@ We'll also cover:
   - **Multimodal Models**: These handle multiple data types, such as text and images.
   - **Chat vs Completion Models**: Chat models are optimized for back-and-forth conversations, while completion models generate a single block of text from a given prompt.
   
-<insert images of Fireworks here>
+[TODO] insert images of Fireworks here
 
 - **Streamlit**: A Python-based framework for building and deploying simple web apps. You’ll use Streamlit to create a user-friendly interface to interact with the models.
 
-<insert architectural diagram of Streamlit + Fireworks>
+[TODO] insert architectural diagram of Streamlit + Fireworks
 
 ---
 
 # Task 1: Explore models available on Fireworks via the model playground:
 ## Background
 
+[TODO] Write background info
 
+## Actvity
+
+[TODO] Write activity information
 
 
 
@@ -54,6 +58,10 @@ We'll also cover:
   --- 
 
 ## Steps
+
+[TODO] Update with the correct information, including how to install Streamlit
+
+[TODO] Create a jupyter notebook (and a Colab notebook) for streamlit - add both of those here
 
 1. **Step 1: Set Up Fireworks API Connection**:
     - Install the Fireworks Python client and authenticate using your API key:
