@@ -1,10 +1,10 @@
 
 # Part 1: Connecting to Fireworks & Building a Model Comparison App
 
-## Task/Activity:
+## Objectives:
 In this part of the workshop, you will:
 - Connect to Fireworks AI's platform to access a list of hosted models.
-- Build a **Streamlit app** that allows users to compare different models from Fireworks via a dropdown menu.
+- Utilize a **Streamlit app** that allows users to compare different models from Fireworks via a dropdown menu.
 - Perform initial “vibe checks” by querying the selected models.
 
 ---
@@ -12,8 +12,13 @@ In this part of the workshop, you will:
 ## Relevant Concepts/Skills:
 By completing this task, you will:
 - Learn how to use Fireworks' API to interact with and query LLMs and multimodal models.
-- Understand the different types of models (text vs multimodal, chat vs completion).
 - Gain hands-on experience with building interactive apps using **Streamlit**.
+
+We'll also cover:
+- The different types of models (text vs multimodal).
+- The difference between chat vs completion models.
+- Some key parameters for text models versus visual-language models.
+
 
 --- 
 
@@ -22,12 +27,25 @@ By completing this task, you will:
   - **Text Models**: These are used for tasks like text generation, completion, or Q&A.
   - **Multimodal Models**: These handle multiple data types, such as text and images.
   - **Chat vs Completion Models**: Chat models are optimized for back-and-forth conversations, while completion models generate a single block of text from a given prompt.
+  
+<insert images of Fireworks here>
 
 - **Streamlit**: A Python-based framework for building and deploying simple web apps. You’ll use Streamlit to create a user-friendly interface to interact with the models.
 
+<insert architectural diagram of Streamlit + Fireworks>
+
 ---
 
-## Fireworks-Specific Information:
+# Task 1: Explore models available on Fireworks via the model playground:
+## Background
+
+
+
+
+
+---
+# Task 2: Connect to Fireworks model APIs using streamlit
+## Background
 - **Fireworks API**: Fireworks provides a simple API to query its hosted models. You can interact with the API to retrieve available models, send queries, and get results from LLMs.
   - **Text Models Querying Guide**: [Querying Text Models](https://docs.fireworks.ai/guides/querying-text-models)
   - **Embedding Models Querying Guide**: [Querying Embedding Models](https://docs.fireworks.ai/guides/querying-embeddings-models)
@@ -35,7 +53,7 @@ By completing this task, you will:
 
   --- 
 
-  ## Steps to Accomplish the Task:
+## Steps
 
 1. **Step 1: Set Up Fireworks API Connection**:
     - Install the Fireworks Python client and authenticate using your API key:
