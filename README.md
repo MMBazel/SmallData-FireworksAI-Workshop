@@ -51,27 +51,57 @@ And while this is helpful, this isn't required:
 
 ---
 
+
 ## Setup Instructions
 
 ### 1. Clone this repository
 ```bash
-git clone https://github.com/[your-github-username]/[repo-name].git
-cd [repo-name]
+git clone https://github.com/MMBazel/SmallData-FireworksAI-Workshop.git
+cd SmallData-FireworksAI-Workshop
 ```
 
-### 2. Install dependencies
-To follow along, you'll need to install the necessary libraries. Use the following command:
+### 2. Create and activate a virtual environment
+To avoid dependency conflicts, it's recommended to create a virtual environment. Here's how to do it:
+
+**For macOS/Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**For Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
+Once your virtual environment is activated, install the required libraries:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. API Keys (if applicable)
-If you're using any API services (like OpenAI, Hugging Face, etc.), ensure you've set up your API keys:
-```bash
-export API_KEY="your-api-key"
-```
+### 4. Set up your API keys
+To set up your Fireworks API key, follow these steps:
 
-### 4. Fireworks AI Installation/Setup
+1. Make a copy of the `.env.template` file in the root of the repository:
+   ```bash
+   cp .env.template .env
+   ```
+
+2. Open the `.env` file and set your Fireworks API key:
+   ```bash
+   FIREWORKS_API_KEY="your-fireworks-api-key"
+   ```
+
+3. Save the file. The environment variables will now be automatically loaded when running the code.
+
+### 5. Fireworks AI Installation/Setup
+- [Quickstart with Fireworks AI](https://docs.fireworks.ai/getting-started/quickstart)
+
+Additional details:
+- [firectl](https://docs.fireworks.ai/tools-sdks/firectl/firectl)
+- [Python Client](https://docs.fireworks.ai/tools-sdks/python-client/installation)
 - [Quickstart with Fireworks AI](https://docs.fireworks.ai/getting-started/quickstart)
 
 Additional details on: 
