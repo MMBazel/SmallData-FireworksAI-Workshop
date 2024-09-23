@@ -36,12 +36,33 @@ By completing this task, you will:
 
 [TODO] Add image
 
+### Additional Considerations:
+
+- **LLM Selection**: Depending on the task, you might choose different types of models from Fireworks (e.g., models fine-tuned for technical answers versus general knowledge generation).
+- **Document Ingestion**: In production systems, you would likely batch process and pre-process large datasets before ingesting them into a vector store. The ingestion process for this workshop will be kept simple for learning purposes.
+- **Query Complexity**: You can extend the complexity of queries by using more advanced techniques like query expansion or document chunking to improve retrieval results.
+
 ---
 
 ## Fireworks-Specific Information:
-- Fireworks AI allows you to query LLMs easily and integrates well with retrieval systems. You can combine Fireworks models with vector stores to build a RAG system.
+In a Retrieval-Augmented Generation (RAG) application, **Fireworks** fits in two primary areas:
+
+1. **Embeddings Generation**: Fireworks offers a range of embedding models that transform input text into high-dimensional vectors. These embeddings represent the semantic meaning of documents or queries, which is crucial for efficient retrieval in a RAG system. In a typical RAG pipeline, Fireworks is responsible for generating embeddings from the query and relevant documents.
+2. **Language Model Inference**: Fireworks also provides powerful large language models (LLMs) such as Meta Llama, Mixtral, and Google Gemma. These models synthesize the retrieved information and generate responses based on the context provided by the embeddings. Fireworks is used to query these models to enhance the quality and relevance of the final generated response.
+
+
+In short, Fireworks AI allows you to query LLMs easily and integrates well with retrieval systems. You can combine Fireworks models with vector stores to build a RAG system.
   - **Text Models Querying Guide**: [Querying Text Models](https://docs.fireworks.ai/guides/querying-text-models)
   - **Fireworks Python Client Setup**: [Install the Fireworks Python Client](https://docs.fireworks.ai/tools-sdks/python-client/installation)
+
+
+### Minimum Viable RAG Q&A App with Fireworks:
+This setup allows you to build a lightweight RAG system where Fireworks handles both embedding generation and LLM inference.
+
+- Vector Store: A database that stores document embeddings for efficient retrieval based on similarity to the user’s query.
+- Embeddings Generation: Use Fireworks embedding models to convert user queries and documents into embeddings.
+- Query Processing: The query is first embedded and then used to retrieve the most relevant documents from the vector store.
+- Response Generation: The retrieved documents are passed to an LLM hosted on Fireworks, which generates a coherent answer by leveraging both the query and the retrieved information.
 
 ## Steps to Accomplish the Task:
 
