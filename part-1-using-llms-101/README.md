@@ -1,79 +1,94 @@
+## Project: Fireworks Model Comparison App
 
+### Overview
+The **Fireworks Model Comparison App** is an interactive tool built using **Streamlit** that allows users to compare various Large Language Models (LLMs) hosted on **Fireworks AI**. Users can adjust key model parameters, provide custom prompts, and generate model outputs to compare their behavior and responses. Additionally, an LLM-as-a-Judge feature is available to evaluate the generated outputs and provide feedback on their quality.
 
-# Part 1: Connecting to Fireworks & Building a Model Comparison App
-
-## Objectives:
-In this part of the workshop, you will:
-- Connect to Fireworks AI's platform to access a list of hosted models.
-- Utilize a **Streamlit app** that allows users to compare different models from Fireworks via a dropdown menu.
-- Perform initial “vibe checks” by querying the selected models.
-
----
-
-## Relevant Concepts/Skills:
-By completing this task, you will:
-- Learn how to use Fireworks' API to interact with and query LLMs and multimodal models.
-- Gain hands-on experience with building interactive apps using **Streamlit**.
-
-We'll also cover:
-- The different types of models (text vs multimodal).
-- The difference between chat vs completion models.
-- Some key parameters for text models versus visual-language models.
-
---- 
-
-## Background Information:
-- **Model Types**: Fireworks AI offers multiple types of models:
-  - **Text Models**: These are used for tasks like text generation, completion, or Q&A.
-  - **Multimodal Models**: These handle multiple data types, such as text and images.
-  - **Chat vs Completion Models**: Chat models are optimized for back-and-forth conversations, while completion models generate a single block of text from a given prompt.
+### Objectives
+- **Compare Models**: Select different models from the Fireworks platform and compare their outputs based on a shared prompt.
+- **Modify Parameters**: Fine-tune parameters such as **Max Tokens**, **Temperature**, **Top-p**, and **Top-k** to observe how they influence model behavior.
+- **Evaluate Using LLM-as-a-Judge**: After generating responses, use a separate model to act as a judge and evaluate the outputs from the selected models.
   
+### Features
+- **Streamlit UI**: A simple and intuitive interface where users can select models, input prompts, and adjust model parameters.
+- **LLM Comparison**: Select up to three different models, run a query with the same prompt, and view side-by-side responses.
+- **Parameter Exploration**: Explore and modify different parameters such as Max Tokens, Temperature, Top-p, and more to see how they affect the model's response.
+- **LLM-as-a-Judge**: Let another LLM compare the generated responses from the models and provide a comparison.
 
-- **Streamlit**: A Python-based framework for building and deploying simple web apps. You’ll use Streamlit to create a user-friendly interface to interact with the models.
+### App Structure
+The app consists of two main pages:
+1. **Comparing LLMs**:
+   - Compare the outputs of three selected LLMs from Fireworks AI by providing a prompt.
+   - View the responses side-by-side for easy comparison.
+   - A selected LLM acts as a judge to evaluate the generated responses.
+   
+2. **Parameter Exploration**:
+   - Modify various parameters for the LLMs (e.g., Max Tokens, Temperature, Top-p) and observe how they affect the outputs.
+   - Compare three different outputs generated with varying parameter configurations.
+   - Use LLM-as-a-Judge to provide a final evaluation of the outputs.
 
-[TODO] insert architectural diagram of Streamlit + Fireworks
+### Setup and Installation
 
----
+#### Prerequisites
+- **Python 3.x** installed on your machine.
+- A **Fireworks AI** API key, which you can obtain by signing up at [Fireworks AI](https://fireworks.ai).
+- Install **Streamlit** and the **Fireworks Python Client**.
 
-# Task 1: Explore models available on Fireworks via the model playground:
+#### Step-by-Step Setup
+1. **Clone the repository**:
+    ```bash
+    git clone <repository_url>
+    cd <repository_directory>
+    ```
 
-## Background
-Fireworks AI provides access to multiple models that vary in architecture and functionality, ranging from simple text models to more complex multimodal models. These models are hosted on Fireworks' platform, and you can use the Model Playground feature to explore and query different models. You’ll get hands-on experience interacting with various LLMs and multimodal models, comparing their outputs and determining their suitability for different tasks.
+2. **Set up a virtual environment (optional but recommended)**:
+    ```bash
+    python -m venv env
+    source env/bin/activate  # On macOS/Linux
+    .\env\Scripts\activate  # On Windows
+    ```
 
-## Activity
-- Use Fireworks' **Model Playground** to explore the different available models.
-- Compare text and multimodal models by performing queries and analyzing the results.
-- Document your observations for each model to understand how they handle different input types.
-  
-**Steps**:
-1. Navigate to the Fireworks Model Playground.
-2. Select different models from the dropdown menu and run queries using sample prompts.
-3. Observe the output generated by the models and compare their behaviors.
+3. **Install required dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
----
+4. **Set up your environment variables**:
+   - **Copy the `.env.template` file** into a new directory named `env`:
+     ```bash
+     mkdir env
+     cp .env.template env/.env
+     ```
+   - **Rename the file** to `.env`:
+     ```bash
+     mv env/.env.template env/.env  # On macOS/Linux
+     ren env\.env.template .env  # On Windows
+     ```
+   - **Fill in your Fireworks API key** in the `.env` file:
+     ```bash
+     FIREWORKS_API_KEY=<your_api_key>
+     ```
 
-# Task 2: Connect to Fireworks model APIs using Streamlit
+5. **Run the Streamlit app**:
+    ```bash
+    streamlit run app.py
+    ```
 
-## Background
-- **Fireworks API**: Fireworks provides a simple API to query its hosted models. You can interact with the API to retrieve available models, send queries, and get results from LLMs. This part of the workshop will involve setting up your environment to connect to the Fireworks API and then building a basic Streamlit app to interact with the models.
+6. **Explore the app**:
+    - Open the app in your browser via the URL provided by Streamlit (typically `http://localhost:8501`).
+    - Navigate between the pages to compare models and adjust parameters.
 
-  - **Text Models Querying Guide**: [Querying Text Models](https://docs.fireworks.ai/guides/querying-text-models)
-  - **Embedding Models Querying Guide**: [Querying Embedding Models](https://docs.fireworks.ai/guides/querying-embeddings-models)
-  - **Python Client Setup**: [Install the Fireworks Python Client](https://docs.fireworks.ai/tools-sdks/python-client/installation)
+### Example Prompts
+Here are some example prompts you can try in the app:
+- **Prompt 1**: "Describe the future of AI in 500 words."
+- **Prompt 2**: "Write a short story about a time traveler who visits ancient Rome."
+- **Prompt 3**: "Explain quantum computing in simple terms."
+- **Prompt 4**: "Generate a recipe for a healthy vegan dinner."
 
-## Activity
-In this task, you will:
-- Build a basic **Streamlit** app that lists the available models from Fireworks.
-- Allow users to select a model and perform a basic query.
-- Display the results in the Streamlit interface, enabling easy comparison of different model outputs.
+### Fireworks API Documentation
+To learn more about how to query models and interact with the Fireworks API, visit the [Fireworks API Documentation](https://docs.fireworks.ai/api-reference/post-chatcompletions).
 
-**Steps**:
-1. Set up your local environment with the Fireworks Python Client.
-2. Write the code for a Streamlit app that connects to Fireworks API.
-3. Create a dropdown menu in Streamlit that lists available models.
-4. Build an input field where users can provide their query prompts.
-5. Display the results from the model query in the Streamlit app.
+### Contributing
+We welcome contributions to improve this app! To contribute, fork the repository, make your changes, and submit a pull request.
 
----
-
-By completing these tasks, you'll have a working app that can compare multiple models in real-time and a foundational understanding of how to interact with Fireworks' API to query different models.
+### License
+This project is licensed under the MIT License.
