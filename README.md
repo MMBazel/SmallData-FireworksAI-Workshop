@@ -1,5 +1,5 @@
 # ⚠️ Note: Projects have been moved over to Fireworks repo ⚠️
-Please checkout [the new Fireworks examples repo](https://github.com/fw-ai/examples).
+Please check out [the new Fireworks examples repo](https://github.com/fw-ai/examples).
 
 We are currently in the process of migrating tutorials, apps, and examples (and consolidating them here) from the following repos: 
 * [Cookbook V1](https://github.com/fw-ai/cookbook) - Contains an amalgamation of guides and tutorials.
