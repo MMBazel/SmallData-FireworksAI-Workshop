@@ -1,3 +1,15 @@
+# ⚠️ Note: Projects have been moved over to Fireworks repo ⚠️
+Please checkout [the new Fireworks examples repo](https://github.com/fw-ai/examples).
+
+We are currently in the process of migrating tutorials, apps, and examples (and consolidating them here) from the following repos: 
+* [Cookbook V1](https://github.com/fw-ai/cookbook) - Contains an amalgamation of guides and tutorials.
+* [ai-starter-kits](https://github.com/fw-ai/ai-starter-kits) - Contains a couple E2E projects.
+* [forge](https://github.com/fw-ai/forge) - Contains demo apps illustrating the capabilities of large language and image models.
+* As well as this one.
+
+For any questions, PRs, or issues, please create them at the official Fireworks repo.
+
+---
 
 # Fireworks AI Workshop: Building and Deploying Compound AI Systems
 
